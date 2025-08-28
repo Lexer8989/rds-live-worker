@@ -5,8 +5,8 @@ compatibility_flags = ["nodejs_compat"]
 
 # KV namespace for caching
 [[kv_namespaces]]
-binding = "rds-live-worker"
-id = "77ccae64ed894050907b3f74421bb753"  # Replace with actual KV namespace ID
+binding = "KV_BINDING"
+id = "bc76246ba65a4011a3266b30bd7b8058"  # Replace with actual KV namespace ID
 preview_id = "YOUR_KV_PREVIEW_ID"  # Replace with preview namespace ID
 
 # Scheduled trigger - runs every 1h45min
