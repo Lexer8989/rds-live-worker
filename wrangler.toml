@@ -1,12 +1,12 @@
-name = "rds-live-worker"
+name = "rds-live-extractor"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
 # KV namespace for caching
 [[kv_namespaces]]
-binding = "RDS_CACHE"
-id = "b3e68978ad75458f8b4ed94edec56267"  # Replace with actual KV namespace ID
+binding = "rds-live-worker"
+id = "77ccae64ed894050907b3f74421bb753"  # Replace with actual KV namespace ID
 preview_id = "YOUR_KV_PREVIEW_ID"  # Replace with preview namespace ID
 
 # Scheduled trigger - runs every 1h45min
