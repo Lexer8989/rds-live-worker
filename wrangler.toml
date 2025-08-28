@@ -27,10 +27,10 @@ zone_name = "your-domain.com"
 command = ""
 
 [env.staging]
-name = "rds-live-worker-staging"
+name = "rds-live-extractor-staging"
 vars = { ENVIRONMENT = "staging" }
 
 [[env.staging.kv_namespaces]]
-binding = "RDS_CACHE"
+binding = "RDS_CACHE2"
 id = "YOUR_STAGING_KV_NAMESPACE_ID"
 preview_id = "YOUR_STAGING_KV_PREVIEW_ID"
