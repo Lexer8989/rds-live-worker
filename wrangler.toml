@@ -18,9 +18,9 @@ crons = ["*/2 * * * *"]  # Every 2 minutes
 ENVIRONMENT = "production"
 
 # Custom routes (optional)
-[[routes]]
-pattern = "your-domain.com/playlist/*"
-zone_name = "your-domain.com"
+# [[routes]]
+# pattern = "your-domain.com/playlist/*"
+# zone_name = "your-domain.com"
 
 # Worker limits and settings
 [build]
