@@ -1,0 +1,36 @@
+name = "rds-live-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV namespace for caching
+[[kv_namespaces]]
+binding = "RDS_CACHE"
+id = "77ccae64ed894050907b3f74421bb753"  # Replace with actual KV namespace ID
+preview_id = "YOUR_KV_PREVIEW_ID"  # Replace with preview namespace ID
+
+# Scheduled trigger - runs every 1h45min
+[triggers]
+crons = ["*/2 * * * *"]  # Every 2 minutes
+
+# Environment variables (optional)
+[vars]
+ENVIRONMENT = "production"
+
+# Custom routes (optional)
+[[routes]]
+pattern = "your-domain.com/playlist/*"
+zone_name = "your-domain.com"
+
+# Worker limits and settings
+[build]
+command = ""
+
+[env.staging]
+name = "rds-live-worker-staging"
+vars = { ENVIRONMENT = "staging" }
+
+[[env.staging.kv_namespaces]]
+binding = "RDS_CACHE"
+id = "YOUR_STAGING_KV_NAMESPACE_ID"
+preview_id = "YOUR_STAGING_KV_PREVIEW_ID"

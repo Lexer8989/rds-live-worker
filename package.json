@@ -1,0 +1,41 @@
+{
+  "name": "rds-live-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker per generazione playlist RDS Live",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:staging": "wrangler deploy --env staging",
+    "tail": "wrangler tail",
+    "kv:create": "wrangler kv:namespace create RDS_CACHE",
+    "kv:list": "wrangler kv:key list --binding RDS_CACHE",
+    "test": "echo \"Nessun test specificato\" && exit 1"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers", 
+    "iptv",
+    "m3u",
+    "rds-live",
+    "streaming"
+  ],
+  "author": "RDS Live Worker",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0",
+    "@cloudflare/workers-types": "^4.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/rds-live-worker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/rds-live-worker/issues"
+  },
+  "homepage": "https://github.com/yourusername/rds-live-worker#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
