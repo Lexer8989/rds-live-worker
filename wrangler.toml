@@ -18,7 +18,7 @@ crons = ["*/2 * * * *"]  # Every 2 minutes
 ENVIRONMENT = "production"
 
 # Custom routes (optional)
-[routes]]
+[routes]
 pattern = "rds-live-extractor/playlist/*"
 zone_name = "rds-live-extractor"
 
